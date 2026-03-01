@@ -115,17 +115,19 @@ export function ChatScreen({ sessionId, patientName }: Props) {
       />
 
       <View style={styles.inputBar}>
-        <TextInput
-          style={styles.textInput}
-          value={input}
-          onChangeText={setInput}
-          placeholder="Type a message..."
-          placeholderTextColor={colors.textLight}
-          multiline
-          editable={!sending}
-          onSubmitEditing={() => handleSend()}
-        />
-        <VoiceButton onRecordingComplete={() => {}} disabled={sending} />
+        <View style={styles.textInputWrapper}>
+          <TextInput
+            style={styles.textInput}
+            value={input}
+            onChangeText={setInput}
+            placeholder="Type a message..."
+            placeholderTextColor={colors.textLight}
+            multiline
+            editable={!sending}
+            onSubmitEditing={() => handleSend()}
+          />
+          <VoiceButton onRecordingComplete={() => {}} disabled={sending} />
+        </View>
         <TouchableOpacity
           style={[styles.sendButton, (!input.trim() || sending) && styles.sendButtonDisabled]}
           onPress={() => handleSend()}
@@ -159,9 +161,13 @@ const styles = StyleSheet.create({
     flexDirection: 'row', alignItems: 'flex-end', paddingHorizontal: 12, paddingVertical: 10,
     backgroundColor: colors.surface, borderTopWidth: 1, borderTopColor: colors.border, gap: 8,
   },
+  textInputWrapper: {
+    flex: 1, flexDirection: 'row', alignItems: 'center', backgroundColor: colors.card,
+    borderRadius: 24, paddingRight: 6,
+  },
   textInput: {
-    flex: 1, minHeight: 48, maxHeight: 120, backgroundColor: colors.card,
-    borderRadius: 24, paddingHorizontal: 18, paddingVertical: 12, fontSize: 17, color: colors.text,
+    flex: 1, minHeight: 48, maxHeight: 120,
+    paddingHorizontal: 18, paddingVertical: 12, fontSize: 17, color: colors.text,
   },
   sendButton: {
     width: 48, height: 48, borderRadius: 24, backgroundColor: colors.primary,

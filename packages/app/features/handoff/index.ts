@@ -1,2 +1,1 @@
-// Handoff board — TODO: implement caregiver handoff screen
-export {};
+export { HandoffScreen } from './handoff-screen';
