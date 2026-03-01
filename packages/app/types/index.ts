@@ -6,41 +6,6 @@ export interface Patient {
   cognitive_level: string;
 }
 
-export interface MonitorReport {
-  emotion: string;
-  engagement: string;
-  memory_quality: string;
-  cognitive_signs: string;
-  risk_flags: string;
-  recommendation: string;
-  turn: number;
-  timestamp: string;
-}
-
-export interface ChatMessage {
-  id: string;
-  role: 'user' | 'assistant';
-  content: string;
-  audioUrl?: string;
-  imageUrl?: string;
-  monitor?: MonitorReport;
-  timestamp: Date;
-}
-
-export interface ChatResponse {
-  response: string;
-  monitor: MonitorReport;
-  audio_url: string | null;
-  image_url: string | null;
-  turn: number;
-}
-
-export interface SessionInfo {
-  session_id: string;
-  patient_name: string;
-  patient_id: string;
-}
-
 export interface TrendEntry {
   session_date: string;
   turn: number;
