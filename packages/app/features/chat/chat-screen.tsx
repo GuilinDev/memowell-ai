@@ -64,19 +64,32 @@ function SummaryBubble({ content }: { content: string }) {
 }
 
 function ProtocolCard({ data }: { data: ProtocolStep[] }) {
+  // Filter out protocols with no actionable steps
+  const hasContent = data.some(p => p.steps && p.steps.length > 0 && p.steps[0] !== '');
+  if (!hasContent) return null;
+
   return (
     <View style={styles.protocolCard}>
-      <Text style={styles.protocolTitle}>📋 Recommended Protocol</Text>
-      {data.map((step, i) => (
-        <View key={i} style={styles.protocolStep}>
-          <Text style={styles.protocolStepText}>
-            {i + 1}. {step.text}
-          </Text>
-          <Text style={styles.protocolSource}>
-            — {step.title || step.filename}{step.page ? `, p.${step.page}` : ''}
-          </Text>
-        </View>
-      ))}
+      <Text style={styles.protocolTitle}>📋 Recommended Steps</Text>
+      {data.map((protocol, i) => {
+        // Prefer LLM-summarized steps; fall back to truncated text
+        const steps = protocol.steps && protocol.steps.length > 0 && protocol.steps[0] !== ''
+          ? protocol.steps
+          : null;
+        if (!steps) return null;
+        return (
+          <View key={i} style={styles.protocolGroup}>
+            {steps.map((step: string, j: number) => (
+              <Text key={j} style={styles.protocolStepText}>
+                {j + 1}. {step}
+              </Text>
+            ))}
+            <Text style={styles.protocolSource}>
+              📎 {protocol.source || protocol.title || protocol.filename}{protocol.page ? `, p.${protocol.page}` : ''}
+            </Text>
+          </View>
+        );
+      })}
     </View>
   );
 }
@@ -294,8 +307,13 @@ export function ChatAppScreen() {
         });
       }
 
-      // Protocol card
-      if (result.protocols?.length) {
+      // Check if protocols have actual steps
+      const hasProtocols = result.protocols?.some(
+        p => p.steps && p.steps.length > 0 && p.steps[0] !== '' && p.steps[0] !== 'No specific protocols needed. Continue monitoring.'
+      );
+
+      // Protocol card (only if real steps exist)
+      if (hasProtocols) {
         newMsgs.push({
           id: nextId(),
           type: 'protocol',
@@ -556,6 +574,9 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     color: colors.text,
     marginBottom: 10,
+  },
+  protocolGroup: {
+    marginBottom: 12,
   },
   protocolStep: {
     marginBottom: 8,

@@ -50,12 +50,14 @@ export interface EventParsed {
 }
 
 export interface ProtocolStep {
-  text: string;
+  text?: string;
+  text_preview?: string;
   source: string;
   title: string;
   page: number;
   filename: string;
   score?: number;
+  steps?: string[];
 }
 
 export interface EventReportResponse {

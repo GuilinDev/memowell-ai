@@ -72,8 +72,12 @@ async def report_event(
 
     # Skip RAG for positive/no-issue reports
     # Only skip RAG if the parsed summary indicates explicitly positive/no-issue
-    is_positive = any(kw in (parsed.get("summary", "") + " " + description).lower()
-                      for kw in ["good day", "doing well", "no issue", "no concern", "stable", "no incident", "uneventful"])
+    combined_text = (parsed.get("summary", "") + " " + description).lower()
+    is_positive = any(kw in combined_text
+                      for kw in ["good day", "doing well", "doing good", "doing great", "doing fine",
+                                 "no issue", "no issues", "no concern", "no concerns", "no problem",
+                                 "stable", "no incident", "uneventful", "all good", "everything is fine",
+                                 "no notable", "routine", "normal day", "no behavioral"])
     if event_type == EventType.OTHER and severity == Severity.LOW and is_positive:
         protocols_formatted = []
         summarized = [{"source": "N/A", "page": 0, "steps": ["No specific protocols needed. Continue monitoring."]}]
