@@ -220,12 +220,37 @@ export function ChatAppScreen() {
             timestamp: new Date(evt.created_at || Date.now()),
           });
         }
+        // Show protocol recommendations with citations from history
+        if (evt.protocol_matched && Array.isArray(evt.protocol_matched) && evt.protocol_matched.length > 0) {
+          const hasSteps = evt.protocol_matched.some(
+            (p: any) => p.steps && p.steps.length > 0 && p.steps[0] !== '' &&
+              p.steps[0] !== 'No specific protocols needed. Continue monitoring.'
+          );
+          if (hasSteps) {
+            historyMsgs.push({
+              id: nextId(),
+              type: 'protocol',
+              content: '',
+              data: evt.protocol_matched,
+              timestamp: new Date(evt.created_at || Date.now()),
+            });
+          }
+        }
         if (evt.intervention_description) {
           historyMsgs.push({
             id: nextId(),
             type: 'notification',
             content: `✅ Intervention: ${evt.intervention_description}`,
             timestamp: new Date(evt.intervention_at || Date.now()),
+          });
+        }
+        if (evt.outcome_description) {
+          const emoji = evt.resolved ? '✅' : '🔄';
+          historyMsgs.push({
+            id: nextId(),
+            type: 'notification',
+            content: `${emoji} Outcome: ${evt.outcome_description}`,
+            timestamp: new Date(evt.outcome_at || Date.now()),
           });
         }
       }

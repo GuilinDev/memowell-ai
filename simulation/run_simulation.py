@@ -23,6 +23,9 @@ import sys
 from pathlib import Path
 from datetime import datetime
 
+MAX_RETRIES = 3
+RETRY_BACKOFF = [3.0, 6.0, 12.0]
+
 # Add project root to path
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
@@ -105,25 +108,41 @@ async def ensure_patients_exist(api_url: str, patients: list, facility_id: int =
                 patient_id_map[p["id"]] = existing_map[p["name"]]
                 print(f"  ⏭️  Patient exists: {p['name']} (id={existing_map[p['name']]})")
             else:
-                try:
-                    resp = await client.post("/api/patients", json={
-                        "facility_id": facility_id,
-                        "name": p["name"],
-                        "room": f"Room {p['id'][1:]}",
-                        "diagnosis": p.get("diagnosis", "Dementia"),
-                        "cognitive_level": p.get("stage", "moderate"),
-                        "medications": p.get("medications", []),
-                        "allergies": [],
-                        "special_notes": f"{p.get('personality', '')} Behaviors: {', '.join(p.get('common_behaviors', []))}.",
-                    })
-                    if resp.status_code in (200, 201):
-                        data = resp.json()
-                        patient_id_map[p["id"]] = data.get("id", 1)
-                        print(f"  ✅ Created patient: {p['name']} (id={patient_id_map[p['id']]})")
-                    else:
-                        print(f"  ❌ Failed to create {p['name']}: {resp.status_code} {resp.text[:200]}")
-                except Exception as e:
-                    print(f"  ❌ Failed to create {p['name']}: {e}")
+                created = False
+                for attempt in range(MAX_RETRIES):
+                    try:
+                        resp = await client.post("/api/patients", json={
+                            "facility_id": facility_id,
+                            "name": p["name"],
+                            "room": f"Room {p['id'][1:]}",
+                            "diagnosis": p.get("diagnosis", "Dementia"),
+                            "cognitive_level": p.get("stage", "moderate"),
+                            "medications": p.get("medications", []),
+                            "allergies": [],
+                            "special_notes": f"{p.get('personality', '')} Behaviors: {', '.join(p.get('common_behaviors', []))}.",
+                        })
+                        if resp.status_code in (200, 201):
+                            data = resp.json()
+                            patient_id_map[p["id"]] = data.get("id", 1)
+                            print(f"  ✅ Created patient: {p['name']} (id={patient_id_map[p['id']]})")
+                            created = True
+                            break
+                        elif resp.status_code >= 500 or resp.status_code == 429:
+                            wait = RETRY_BACKOFF[attempt] if attempt < len(RETRY_BACKOFF) else RETRY_BACKOFF[-1]
+                            print(f"  ⚠️ {resp.status_code} creating {p['name']}, retry {attempt+1}/{MAX_RETRIES}...")
+                            await asyncio.sleep(wait)
+                        else:
+                            print(f"  ❌ Failed to create {p['name']}: {resp.status_code} {resp.text[:200]}")
+                            break
+                    except (httpx.TimeoutException, httpx.ConnectError) as e:
+                        wait = RETRY_BACKOFF[attempt] if attempt < len(RETRY_BACKOFF) else RETRY_BACKOFF[-1]
+                        print(f"  ⚠️ {type(e).__name__} creating {p['name']}, retry {attempt+1}/{MAX_RETRIES}...")
+                        await asyncio.sleep(wait)
+                    except Exception as e:
+                        print(f"  ❌ Failed to create {p['name']}: {e}")
+                        break
+                if not created and p["id"] not in patient_id_map:
+                    print(f"  ❌ All retries exhausted for {p['name']}")
 
         # If we couldn't get IDs, use sequential
         if not patient_id_map:
@@ -196,6 +215,10 @@ async def run_shift(
             event = pa.should_trigger_behavior(clock, env)
             if event is None:
                 continue
+
+            # Throttle API calls to avoid upstream rate limits (Groq etc.)
+            if total_events > 0:
+                await asyncio.sleep(3)  # 3s between events
 
             total_events += 1
             behavior = event["behavior"]

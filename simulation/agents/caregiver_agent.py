@@ -9,8 +9,14 @@ Different skill levels produce different quality reports:
 """
 import json
 import random
+import asyncio
 import httpx
 from typing import Optional, Dict, List
+
+
+# Retry config
+MAX_RETRIES = 3
+RETRY_BACKOFF = [3.0, 6.0, 12.0]  # seconds between retries (generous for Groq rate limits)
 
 
 # Report quality templates by skill level
@@ -124,6 +130,44 @@ class CaregiverAgent:
 
         return report
 
+    async def _request_with_retry(self, method: str, url: str, **kwargs) -> Optional[httpx.Response]:
+        """
+        Make an HTTP request with exponential backoff retry.
+        Retries on 5xx, 429, timeouts, and connection errors.
+        Does NOT retry on 4xx (except 429) — those are client bugs to fix.
+        """
+        last_error = None
+        for attempt in range(MAX_RETRIES):
+            try:
+                response = await self.client.request(method, url, **kwargs)
+
+                # Success
+                if response.status_code < 400:
+                    return response
+
+                # 4xx (not 429) = client error, don't retry
+                if 400 <= response.status_code < 500 and response.status_code != 429:
+                    print(f"[{self.name}] Client error {response.status_code} on {url}: {response.text[:200]}")
+                    return response  # return as-is, caller handles
+
+                # 429 or 5xx = retry
+                wait = RETRY_BACKOFF[attempt] if attempt < len(RETRY_BACKOFF) else RETRY_BACKOFF[-1]
+                print(f"[{self.name}] ⚠️ {response.status_code} on {url}, retry {attempt+1}/{MAX_RETRIES} in {wait}s...")
+                await asyncio.sleep(wait)
+
+            except (httpx.TimeoutException, httpx.ConnectError, httpx.ReadError) as e:
+                last_error = e
+                wait = RETRY_BACKOFF[attempt] if attempt < len(RETRY_BACKOFF) else RETRY_BACKOFF[-1]
+                print(f"[{self.name}] ⚠️ {type(e).__name__} on {url}, retry {attempt+1}/{MAX_RETRIES} in {wait}s...")
+                await asyncio.sleep(wait)
+
+            except Exception as e:
+                print(f"[{self.name}] ❌ Unexpected error on {url}: {e}")
+                return None
+
+        print(f"[{self.name}] ❌ All {MAX_RETRIES} retries exhausted for {url}")
+        return None
+
     async def report_event(self, event: dict, patient_api_id: int = 1, reporter_api_id: int = 1) -> Optional[dict]:
         """
         Report a behavioral event to CareLoop API.
@@ -132,69 +176,65 @@ class CaregiverAgent:
         """
         report_text = self.generate_report(event)
 
-        try:
-            response = await self.client.post(
-                "/api/events/report",
-                data={
-                    "patient_id": patient_api_id,
-                    "reporter_id": reporter_api_id,
-                    "text": report_text,
-                }
-            )
-            response.raise_for_status()
-            result = response.json()
+        response = await self._request_with_retry(
+            "POST", "/api/events/report",
+            data={
+                "patient_id": patient_api_id,
+                "reporter_id": reporter_api_id,
+                "text": report_text,
+            }
+        )
 
-            self.events_reported.append({
-                "event": event,
-                "report_text": report_text,
-                "api_response": result,
-                "caregiver": self.name,
-            })
-
-            return result
-
-        except Exception as e:
-            print(f"[{self.name}] Error reporting event: {e}")
+        if response is None or response.status_code >= 400:
+            status = response.status_code if response else "no response"
+            print(f"[{self.name}] Error reporting event: {status}")
             return None
+
+        result = response.json()
+        self.events_reported.append({
+            "event": event,
+            "report_text": report_text,
+            "api_response": result,
+            "caregiver": self.name,
+        })
+        return result
 
     async def report_intervention(self, event_id: int, intervention: str) -> Optional[dict]:
         """Report an intervention performed."""
-        try:
-            response = await self.client.post(
-                f"/api/events/{event_id}/intervention",
-                data={"text": intervention}
-            )
-            response.raise_for_status()
-            result = response.json()
+        response = await self._request_with_retry(
+            "POST", f"/api/events/{event_id}/intervention",
+            data={"text": intervention}
+        )
 
-            self.interventions_performed.append({
-                "event_id": event_id,
-                "intervention": intervention,
-                "result": result,
-            })
-
-            return result
-
-        except Exception as e:
-            print(f"[{self.name}] Error reporting intervention: {e}")
+        if response is None or response.status_code >= 400:
+            status = response.status_code if response else "no response"
+            print(f"[{self.name}] Error reporting intervention: {status}")
             return None
+
+        result = response.json()
+        self.interventions_performed.append({
+            "event_id": event_id,
+            "intervention": intervention,
+            "result": result,
+        })
+        return result
 
     async def report_outcome(self, event_id: int, outcome: str, resolved: bool = True) -> Optional[dict]:
         """Report the outcome of an intervention."""
-        try:
-            response = await self.client.post(
-                f"/api/events/{event_id}/outcome",
-                data={
-                    "text": outcome,
-                    "resolved": str(resolved).lower(),  # Form data needs string
-                }
-            )
-            response.raise_for_status()
-            return response.json()
+        response = await self._request_with_retry(
+            "POST", f"/api/events/{event_id}/outcome",
+            data={
+                "text": outcome,
+                "resolved": str(resolved).lower(),  # Form data needs string
+            }
+        )
 
-        except Exception as e:
-            print(f"[{self.name}] Error reporting outcome: {e}")
+        if response is None or response.status_code >= 400:
+            status = response.status_code if response else "no response"
+            print(f"[{self.name}] Error reporting outcome: {status}")
             return None
+
+        return response.json()
 
     def choose_intervention(self, event: dict, protocol_steps: List[str]) -> str:
         """
@@ -292,20 +332,22 @@ class CaregiverAgent:
         """Generate shift handoff report via CareLoop API."""
         shift_map = {"day": "Day", "evening": "Evening", "night": "Night"}
         to_shift_map = {"day": "Evening", "evening": "Night", "night": "Day"}
-        try:
-            response = await self.client.post(
-                "/api/handoffs/generate",
-                json={
-                    "facility_id": facility_id,
-                    "from_shift": shift_map.get(self.shift, "Day"),
-                    "to_shift": to_shift_map.get(self.shift, "Evening"),
-                }
-            )
-            response.raise_for_status()
-            return response.json()
-        except Exception as e:
-            print(f"[{self.name}] Error generating handoff: {e}")
+
+        response = await self._request_with_retry(
+            "POST", "/api/handoffs/generate",
+            json={
+                "facility_id": facility_id,
+                "from_shift": shift_map.get(self.shift, "Day"),
+                "to_shift": to_shift_map.get(self.shift, "Evening"),
+            }
+        )
+
+        if response is None or response.status_code >= 400:
+            status = response.status_code if response else "no response"
+            print(f"[{self.name}] Error generating handoff: {status}")
             return None
+
+        return response.json()
 
     async def close(self):
         """Close the HTTP client."""
