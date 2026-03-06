@@ -12,7 +12,7 @@
 
 ## 🎬 Demo Video
 
-[![CareLoop AI Demo](docs/assets/careloop-preview.gif?v=2)](https://github.com/GuilinDev/memowell-ai/raw/main/docs/assets/careloop-demo.mp4)
+[![CareLoop AI Demo](docs/assets/careloop-full-demo.gif)](https://github.com/GuilinDev/memowell-ai/raw/main/docs/assets/careloop-demo.mp4)
 
 > 📺 *GIF preview auto-plays above — [click for full 50s video](https://github.com/GuilinDev/memowell-ai/raw/main/docs/assets/careloop-demo.mp4) with audio. Three acts: critical event → 25-patient parallel simulation → metrics dashboard.*
 
