@@ -1,0 +1,2332 @@
+✅ Database initialized: sqlite:///./memowell.db
+Database already has data, skipping seed.
+INFO:     Will watch for changes in these directories: ['/home/guilinzhang/allProjects/memowell-ai/api']
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+INFO:     Started reloader process [626728] using WatchFiles
+INFO:     Started server process [626754]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+✅ Database initialized: sqlite:///./memowell.db
+Database already has data, skipping seed.
+✅ Database initialized: sqlite:///./memowell.db
+Database already has data, skipping seed.
+INFO:     127.0.0.1:44980 - "GET /api/health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34406 - "GET /api/patients HTTP/1.1" 200 OK
+[0;93m2026-03-05 18:30:50.788738567 [W:onnxruntime:Default, device_discovery.cc:211 DiscoverDevicesForPlatform] GPU device discovery failed: device_discovery.cc:91 ReadFileContents Failed to open file: "/sys/class/drm/card0/device/vendor"[m
+INFO:     127.0.0.1:34414 - "POST /api/events/report HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:44348 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44348 - "POST /api/events/67/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44348 - "POST /api/events/67/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44348 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44348 - "POST /api/events/68/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44348 - "POST /api/events/68/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37144 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37144 - "POST /api/events/69/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37144 - "POST /api/events/69/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35642 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35642 - "POST /api/events/70/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35642 - "POST /api/events/70/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35642 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35642 - "POST /api/events/71/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35642 - "POST /api/events/71/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35642 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35642 - "POST /api/events/72/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35642 - "POST /api/events/72/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38810 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38810 - "POST /api/events/73/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38810 - "POST /api/events/73/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38810 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38810 - "POST /api/events/74/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38810 - "POST /api/events/74/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36124 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36124 - "POST /api/events/75/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36124 - "POST /api/events/75/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34950 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34950 - "POST /api/events/76/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34950 - "POST /api/events/76/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48494 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:60376 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60376 - "POST /api/events/77/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60376 - "POST /api/events/77/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60376 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60376 - "POST /api/events/78/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60376 - "POST /api/events/78/outcome HTTP/1.1" 200 OK
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_protocols fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:40658 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40658 - "POST /api/events/79/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40658 - "POST /api/events/79/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56980 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56980 - "POST /api/events/80/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56980 - "POST /api/events/80/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54262 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54262 - "POST /api/events/81/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54262 - "POST /api/events/81/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59590 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59590 - "POST /api/events/82/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59590 - "POST /api/events/82/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39162 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39162 - "POST /api/events/83/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39162 - "POST /api/events/83/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39162 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39162 - "POST /api/events/84/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39162 - "POST /api/events/84/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39162 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39162 - "POST /api/events/85/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39162 - "POST /api/events/85/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39162 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:45610 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45610 - "POST /api/events/86/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45610 - "POST /api/events/86/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55716 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55716 - "POST /api/events/87/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55716 - "POST /api/events/87/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35382 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35382 - "POST /api/events/88/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35382 - "POST /api/events/88/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35382 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35382 - "POST /api/events/89/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35382 - "POST /api/events/89/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37676 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37676 - "POST /api/events/90/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37676 - "POST /api/events/90/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37676 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37676 - "POST /api/events/91/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37676 - "POST /api/events/91/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37676 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37676 - "POST /api/events/92/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37676 - "POST /api/events/92/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48784 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48784 - "POST /api/events/93/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48784 - "POST /api/events/93/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37832 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37832 - "POST /api/events/94/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37832 - "POST /api/events/94/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37832 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37832 - "POST /api/events/95/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37832 - "POST /api/events/95/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37832 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37832 - "POST /api/events/96/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37832 - "POST /api/events/96/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37832 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37832 - "POST /api/events/97/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37832 - "POST /api/events/97/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38618 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38618 - "POST /api/events/98/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38618 - "POST /api/events/98/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "POST /api/events/99/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "POST /api/events/99/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "POST /api/events/100/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "POST /api/events/100/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "POST /api/events/101/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "POST /api/events/101/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "POST /api/events/102/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57096 - "POST /api/events/102/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48294 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48294 - "POST /api/events/103/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48294 - "POST /api/events/103/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32964 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32964 - "POST /api/events/104/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32964 - "POST /api/events/104/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32964 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32964 - "POST /api/events/105/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:32964 - "POST /api/events/105/outcome HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:54046 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54046 - "POST /api/events/106/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54046 - "POST /api/events/106/outcome HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:49420 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49420 - "POST /api/events/107/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49420 - "POST /api/events/107/outcome HTTP/1.1" 200 OK
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_protocols fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:54954 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54954 - "POST /api/events/108/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54954 - "POST /api/events/108/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/109/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/109/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/110/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/110/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/111/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/111/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/112/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/112/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/113/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/113/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/114/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33356 - "POST /api/events/114/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57912 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57912 - "POST /api/events/115/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57912 - "POST /api/events/115/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52898 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:57684 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57684 - "POST /api/events/116/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57684 - "POST /api/events/116/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57684 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57684 - "POST /api/events/117/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57684 - "POST /api/events/117/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57684 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57684 - "POST /api/events/118/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57684 - "POST /api/events/118/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41276 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41276 - "POST /api/events/119/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41276 - "POST /api/events/119/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48582 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48582 - "POST /api/events/120/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48582 - "POST /api/events/120/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48582 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48582 - "POST /api/events/121/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48582 - "POST /api/events/121/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48582 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48582 - "POST /api/events/122/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48582 - "POST /api/events/122/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48582 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48582 - "POST /api/events/123/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48582 - "POST /api/events/123/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44008 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_protocols fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:37782 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37782 - "POST /api/events/124/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37782 - "POST /api/events/124/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36590 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:42930 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:45444 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45444 - "POST /api/events/125/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45444 - "POST /api/events/125/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45444 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45444 - "POST /api/events/126/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45444 - "POST /api/events/126/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45444 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45444 - "POST /api/events/127/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45444 - "POST /api/events/127/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45444 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45444 - "POST /api/events/128/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45444 - "POST /api/events/128/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39056 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39056 - "POST /api/events/129/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39056 - "POST /api/events/129/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46904 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46904 - "POST /api/events/130/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46904 - "POST /api/events/130/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46904 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46904 - "POST /api/events/131/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46904 - "POST /api/events/131/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46904 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46904 - "POST /api/events/132/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46904 - "POST /api/events/132/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46904 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46904 - "POST /api/events/133/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46904 - "POST /api/events/133/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52516 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52516 - "POST /api/events/134/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52516 - "POST /api/events/134/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38120 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38120 - "POST /api/events/135/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38120 - "POST /api/events/135/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59528 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59528 - "POST /api/events/136/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59528 - "POST /api/events/136/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59210 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59210 - "POST /api/events/137/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59210 - "POST /api/events/137/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46142 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46142 - "POST /api/events/138/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46142 - "POST /api/events/138/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38352 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38352 - "POST /api/events/139/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38352 - "POST /api/events/139/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53624 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53624 - "POST /api/events/140/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53624 - "POST /api/events/140/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38914 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38914 - "POST /api/events/141/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:38914 - "POST /api/events/141/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39116 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39116 - "POST /api/events/142/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39116 - "POST /api/events/142/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39116 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39116 - "POST /api/events/143/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39116 - "POST /api/events/143/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52060 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:43260 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43260 - "POST /api/events/144/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43260 - "POST /api/events/144/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53320 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:54472 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54472 - "POST /api/events/145/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54472 - "POST /api/events/145/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54472 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54472 - "POST /api/events/146/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54472 - "POST /api/events/146/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55526 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55526 - "POST /api/events/147/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55526 - "POST /api/events/147/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43736 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43736 - "POST /api/events/148/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:43736 - "POST /api/events/148/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55772 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55772 - "POST /api/events/149/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55772 - "POST /api/events/149/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42166 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:57848 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57848 - "POST /api/events/150/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57848 - "POST /api/events/150/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42434 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42434 - "POST /api/events/151/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42434 - "POST /api/events/151/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39916 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39916 - "POST /api/events/152/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39916 - "POST /api/events/152/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44090 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44090 - "POST /api/events/153/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44090 - "POST /api/events/153/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44090 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44090 - "POST /api/events/154/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44090 - "POST /api/events/154/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45240 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45240 - "POST /api/events/155/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45240 - "POST /api/events/155/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39914 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39914 - "POST /api/events/156/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39914 - "POST /api/events/156/outcome HTTP/1.1" 200 OK
+Failed to parse JSON from LLM output: [
+  {
+    "source": "Livingston, G., Kelly, L., Lewis-Holmes, E., Baio, G., Morris, S., Patel, N., Omar, R. Z., Katona, C., & Cooper, C. (2014). Non-pharmacological interventions for agitation in deme
+summarize_protocols fallback — error: Unterminated string starting at: line 3 column 15 (char 20)
+INFO:     127.0.0.1:49218 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49218 - "POST /api/events/157/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49218 - "POST /api/events/157/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49218 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49218 - "POST /api/events/158/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49218 - "POST /api/events/158/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49218 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49218 - "POST /api/events/159/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49218 - "POST /api/events/159/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49218 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49218 - "POST /api/events/160/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49218 - "POST /api/events/160/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49218 - "POST /api/handoffs/generate HTTP/1.1" 201 Created
+INFO:     127.0.0.1:44832 - "POST /api/handoffs/generate HTTP/1.1" 201 Created
+INFO:     127.0.0.1:38410 - "POST /api/handoffs/generate HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36586 - "POST /api/handoffs/generate HTTP/1.1" 201 Created
+INFO:     127.0.0.1:48256 - "GET /api/patients HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48262 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48262 - "POST /api/events/161/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48262 - "POST /api/events/161/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/162/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/162/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/163/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/163/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/164/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/164/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/165/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/165/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/166/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/166/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/167/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/167/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/168/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34356 - "POST /api/events/168/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47538 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47538 - "POST /api/events/169/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47538 - "POST /api/events/169/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35082 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35082 - "POST /api/events/170/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35082 - "POST /api/events/170/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35082 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35082 - "POST /api/events/171/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35082 - "POST /api/events/171/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35082 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35082 - "POST /api/events/172/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35082 - "POST /api/events/172/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35082 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35082 - "POST /api/events/173/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35082 - "POST /api/events/173/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39806 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39806 - "POST /api/events/174/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:39806 - "POST /api/events/174/outcome HTTP/1.1" 200 OK
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_protocols fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:41218 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41218 - "POST /api/events/175/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41218 - "POST /api/events/175/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53446 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53446 - "POST /api/events/176/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53446 - "POST /api/events/176/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40678 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40678 - "POST /api/events/177/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40678 - "POST /api/events/177/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40678 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40678 - "POST /api/events/178/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:40678 - "POST /api/events/178/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45638 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45638 - "POST /api/events/179/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45638 - "POST /api/events/179/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/180/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/180/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/181/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/181/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/182/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/182/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/183/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/183/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/184/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42334 - "POST /api/events/184/outcome HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:44626 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44626 - "POST /api/events/185/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44626 - "POST /api/events/185/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44626 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44626 - "POST /api/events/186/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:44626 - "POST /api/events/186/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54396 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54396 - "POST /api/events/187/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54396 - "POST /api/events/187/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54396 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54396 - "POST /api/events/188/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54396 - "POST /api/events/188/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37994 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37994 - "POST /api/events/189/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37994 - "POST /api/events/189/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58700 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58700 - "POST /api/events/190/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58700 - "POST /api/events/190/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60160 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60160 - "POST /api/events/191/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60160 - "POST /api/events/191/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60160 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60160 - "POST /api/events/192/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60160 - "POST /api/events/192/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60160 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60160 - "POST /api/events/193/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:60160 - "POST /api/events/193/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36212 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36212 - "POST /api/events/194/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36212 - "POST /api/events/194/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36212 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36212 - "POST /api/events/195/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36212 - "POST /api/events/195/outcome HTTP/1.1" 200 OK
+Failed to parse JSON from LLM output: [
+  {
+    "source": "Alzheimer's Association, Page: 67
+summarize_protocols fallback — error: Expecting ',' delimiter: line 3 column 26 (char 31)
+INFO:     127.0.0.1:52474 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /api/events/196/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /api/events/196/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /api/events/197/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /api/events/197/outcome HTTP/1.1" 200 OK
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_protocols fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:52474 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /api/events/198/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /api/events/198/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /api/events/199/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52474 - "POST /api/events/199/outcome HTTP/1.1" 200 OK
+Failed to parse JSON from LLM output: [{"source":"Alzheimer's Association, Page: 69","page":69,"steps":["Redirect Robert to a safe, familiar area and engage him in a calming activity.","Check for immediate needs such as bathroom, hunger, 
+summarize_protocols fallback — error: Expecting ',' delimiter: line 1 column 23 (char 22)
+INFO:     127.0.0.1:50968 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50968 - "POST /api/events/200/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50968 - "POST /api/events/200/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59496 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59496 - "POST /api/events/201/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59496 - "POST /api/events/201/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59496 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59496 - "POST /api/events/202/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59496 - "POST /api/events/202/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59496 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59496 - "POST /api/events/203/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59496 - "POST /api/events/203/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59496 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59496 - "POST /api/events/204/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59496 - "POST /api/events/204/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56266 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56266 - "POST /api/events/205/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56266 - "POST /api/events/205/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56266 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56266 - "POST /api/events/206/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56266 - "POST /api/events/206/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/207/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/207/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/208/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/208/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/209/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/209/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/210/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/210/outcome HTTP/1.1" 200 OK
+Failed to parse JSON from LLM output: [
+  {
+    "source": "Alzheimer's Association",
+    "page": 33,
+    "steps": [
+      "Use the fall‑risk checklist on page 33
+summarize_protocols fallback — error: Expecting ',' delimiter: line 3 column 26 (char 31)
+INFO:     127.0.0.1:41460 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/211/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/211/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/212/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/212/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/213/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/213/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/214/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41460 - "POST /api/events/214/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52660 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:42426 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42426 - "POST /api/events/215/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42426 - "POST /api/events/215/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37116 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37116 - "POST /api/events/216/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:37116 - "POST /api/events/216/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51708 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51708 - "POST /api/events/217/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51708 - "POST /api/events/217/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47688 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47688 - "POST /api/events/218/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47688 - "POST /api/events/218/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47688 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47688 - "POST /api/events/219/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47688 - "POST /api/events/219/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47688 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47688 - "POST /api/events/220/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47688 - "POST /api/events/220/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47688 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47688 - "POST /api/events/221/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47688 - "POST /api/events/221/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52684 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52684 - "POST /api/events/222/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52684 - "POST /api/events/222/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/223/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/223/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/224/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/224/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/225/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/225/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/226/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/226/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/227/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55520 - "POST /api/events/227/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41290 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41290 - "POST /api/events/228/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41290 - "POST /api/events/228/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "POST /api/events/229/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "POST /api/events/229/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "POST /api/events/230/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "POST /api/events/230/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "POST /api/events/231/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57498 - "POST /api/events/231/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56010 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56010 - "POST /api/events/232/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56010 - "POST /api/events/232/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41244 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41244 - "POST /api/events/233/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41244 - "POST /api/events/233/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41130 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41130 - "POST /api/events/234/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41130 - "POST /api/events/234/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41130 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41130 - "POST /api/events/235/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41130 - "POST /api/events/235/outcome HTTP/1.1" 200 OK
+Failed to parse JSON from LLM output: [
+  {
+    "source": "APA",
+    "page": 28,
+    "steps": [
+      "Use non‑pharmacologic approaches such as calming music and gentle reassurance to
+summarize_protocols fallback — error: Unterminated string starting at: line 6 column 7 (char 64)
+INFO:     127.0.0.1:41130 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41130 - "POST /api/events/236/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41130 - "POST /api/events/236/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54802 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54802 - "POST /api/events/237/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54802 - "POST /api/events/237/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59442 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59442 - "POST /api/events/238/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59442 - "POST /api/events/238/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48296 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48296 - "POST /api/events/239/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48296 - "POST /api/events/239/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54148 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54148 - "POST /api/events/240/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:54148 - "POST /api/events/240/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45560 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45560 - "POST /api/events/241/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:45560 - "POST /api/events/241/outcome HTTP/1.1" 200 OK
+INFO:     192.168.1.1:34304 - "GET / HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:45560 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+Failed to parse JSON from LLM output: [
+  {
+    "source": "Alzheimer's Association",
+    "page": 33,
+    "steps": [
+      "Keep the bed in a low
+summarize_protocols fallback — error: Expecting ',' delimiter: line 3 column 26 (char 31)
+INFO:     127.0.0.1:33288 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33288 - "POST /api/events/242/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33288 - "POST /api/events/242/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33288 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33288 - "POST /api/events/243/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33288 - "POST /api/events/243/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33288 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33288 - "POST /api/events/244/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33288 - "POST /api/events/244/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34972 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34972 - "POST /api/events/245/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:34972 - "POST /api/events/245/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58554 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58554 - "POST /api/events/246/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58554 - "POST /api/events/246/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58554 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:36424 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36424 - "POST /api/events/247/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36424 - "POST /api/events/247/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55542 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55542 - "POST /api/events/248/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55542 - "POST /api/events/248/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42240 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42240 - "POST /api/events/249/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42240 - "POST /api/events/249/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58780 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58780 - "POST /api/events/250/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58780 - "POST /api/events/250/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58780 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58780 - "POST /api/events/251/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58780 - "POST /api/events/251/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58780 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58780 - "POST /api/events/252/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:58780 - "POST /api/events/252/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46658 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46658 - "POST /api/events/253/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46658 - "POST /api/events/253/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46658 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46658 - "POST /api/events/254/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:46658 - "POST /api/events/254/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:47344 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:35572 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35572 - "POST /api/events/255/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35572 - "POST /api/events/255/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41646 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41646 - "POST /api/events/256/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41646 - "POST /api/events/256/outcome HTTP/1.1" 200 OK
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_events fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:41646 - "POST /api/handoffs/generate HTTP/1.1" 201 Created
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_events fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:37756 - "POST /api/handoffs/generate HTTP/1.1" 201 Created
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_events fallback — error: Expecting value: line 1 column 1 (char 0)
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_events fallback — error: Expecting value: line 1 column 1 (char 0)
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_events fallback — error: Expecting value: line 1 column 1 (char 0)
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_events fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36568 - "POST /api/patients HTTP/1.1" 201 Created
+INFO:     127.0.0.1:36574 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36574 - "POST /api/events/257/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36574 - "POST /api/events/257/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36574 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36574 - "POST /api/events/258/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36574 - "POST /api/events/258/outcome HTTP/1.1" 200 OK
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_protocols fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:36574 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36574 - "POST /api/events/259/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36574 - "POST /api/events/259/outcome HTTP/1.1" 200 OK
+Failed to parse JSON from LLM output: [
+  {
+    "source": "Alzheimer's Association, Page: 33",
+    "page": 33,
+    "steps": [
+      "
+summarize_protocols fallback — error: Expecting ',' delimiter: line 3 column 26 (char 31)
+INFO:     127.0.0.1:36574 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/261/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/261/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/262/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/262/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/263/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/263/outcome HTTP/1.1" 200 OK
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_protocols fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:49332 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/264/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/264/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/265/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/265/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/266/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/266/outcome HTTP/1.1" 200 OK
+Failed to parse JSON from LLM output: [{"source":"Alzheimer's Association","page":48,"steps":["Offer small, frequent meals with preferred foods and fluids, and sit with Gladys to encourage eating.","Check her intake every hour and record 
+summarize_protocols fallback — error: Expecting ',' delimiter: line 1 column 23 (char 22)
+INFO:     127.0.0.1:49332 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/267/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/267/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/268/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49332 - "POST /api/events/268/outcome HTTP/1.1" 200 OK
+Failed to parse JSON from LLM output: [
+  {
+    "source": "Alzheimer's Association",
+    "page": 53,
+    "steps": [
+      "Record the time and details of the coughing episode
+summarize_protocols fallback — error: Expecting ',' delimiter: line 3 column 26 (char 31)
+INFO:     127.0.0.1:49332 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/270/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/270/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/271/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/271/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/272/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/272/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/273/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/273/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/274/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/274/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/275/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/275/outcome HTTP/1.1" 200 OK
+Failed to parse JSON from LLM output: [{"source":"Alzheimer's Association","page":"148","steps":["Gently redirect Lillian to a safe snack and watch her eating.","Check for signs of confusion or unmet needs that may cause pica.","Document 
+summarize_protocols fallback — error: Expecting ',' delimiter: line 1 column 23 (char 22)
+INFO:     127.0.0.1:33754 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/276/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:33754 - "POST /api/events/276/outcome HTTP/1.1" 200 OK
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_protocols fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:33754 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/278/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/278/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/279/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/279/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/280/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/280/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/281/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/281/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/282/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/282/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/283/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/283/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:36298 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:41896 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/284/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/284/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/285/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/285/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/286/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/286/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/287/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/287/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/288/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/288/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/289/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/289/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:41896 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59454 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59454 - "POST /api/events/291/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59454 - "POST /api/events/291/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59454 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/292/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/292/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/293/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/293/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/294/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/294/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/295/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/295/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/296/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/296/outcome HTTP/1.1" 200 OK
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_protocols fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/297/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/297/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/298/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/298/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/299/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/299/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/300/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/300/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/301/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/301/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/302/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/302/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/303/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/303/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/304/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/304/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/305/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/305/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/306/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/306/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/307/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/307/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/308/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/308/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/309/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/309/outcome HTTP/1.1" 200 OK
+Failed to parse JSON from LLM output: [
+  {
+    "source": "APA, Page:
+summarize_protocols fallback — error: Unterminated string starting at: line 3 column 15 (char 20)
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/310/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/310/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/311/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/311/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:52258 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:59072 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59072 - "POST /api/events/312/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59072 - "POST /api/events/312/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59072 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59072 - "POST /api/events/313/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59072 - "POST /api/events/313/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59072 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59072 - "POST /api/events/314/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59072 - "POST /api/events/314/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59072 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_protocols fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:42430 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/315/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/315/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/316/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/316/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/317/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/317/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/318/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/318/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/319/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/319/outcome HTTP/1.1" 200 OK
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_protocols fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:42430 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/320/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/320/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/321/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/321/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:42430 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:59122 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/322/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/322/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/323/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/323/outcome HTTP/1.1" 200 OK
+Failed to parse JSON from LLM output: [{"source":"Alzheimer's Association","page":"148","steps":["Observe and note the time and possible triggers of the restlessness.","Approach Catherine calmly, use simple reassurance, and offer a brief 
+summarize_protocols fallback — error: Expecting ',' delimiter: line 1 column 23 (char 22)
+INFO:     127.0.0.1:59122 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/324/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/324/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/325/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/325/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/326/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/326/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/327/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/327/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/328/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/328/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/329/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/329/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/330/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/330/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/331/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/331/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/332/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/332/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/333/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:59122 - "POST /api/events/333/outcome HTTP/1.1" 200 OK
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:57698 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/events/334/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/events/334/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/events/335/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/events/335/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/events/336/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/events/336/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/events/337/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/events/337/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57698 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/338/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/338/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/339/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/339/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/340/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/340/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/341/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/341/outcome HTTP/1.1" 200 OK
+LLM returned empty content for model nemotron-3-nano:30b
+Failed to parse JSON from LLM output: 
+summarize_protocols fallback — error: Expecting value: line 1 column 1 (char 0)
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/342/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/342/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/343/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/343/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/344/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/344/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/345/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/345/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/346/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/346/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/347/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/347/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/348/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/348/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/349/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/349/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/350/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/350/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/351/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/351/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:48706 - "POST /api/events/report HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/applications.py", line 1160, in __call__
+    await super().__call__(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/cors.py", line 87, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 122, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 108, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 532, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/.local/lib/python3.12/site-packages/fastapi/routing.py", line 316, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/guilinzhang/allProjects/memowell-ai/api/event_router.py", line 98, in report_event
+    p["steps"] = summarized[i].get("steps", [])
+                 ~~~~~~~~~~^^^
+KeyError: 0
+INFO:     127.0.0.1:56276 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/352/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/352/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/353/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/353/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/354/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/354/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/355/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/355/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/356/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/356/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/357/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/357/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/358/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/358/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/359/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/359/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/360/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/360/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/report HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/361/intervention HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/events/361/outcome HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56276 - "POST /api/handoffs/generate HTTP/1.1" 201 Created
+INFO:     127.0.0.1:41294 - "POST /api/handoffs/generate HTTP/1.1" 201 Created

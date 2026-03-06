@@ -1,0 +1,10 @@
+{
+    "model": "nemotron-3-nano:30b",
+    "model_slug": "nemotron",
+    "shift": "night",
+    "run_id": "nemotron_night",
+    "duration_seconds": 2952,
+    "exit_code": 0,
+    "timestamp": "2026-03-05T20:51:37-05:00",
+    "ollama_version": "ollama version is 0.17.6"
+}

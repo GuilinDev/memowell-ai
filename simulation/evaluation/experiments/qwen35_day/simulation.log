@@ -1,0 +1,139 @@
+
+======================================================================
+🏥 CARELOOP VIRTUAL NURSING HOME — AGENT SIMULATION
+======================================================================
+
+📋 Loaded 25 patient profiles, 8 staff profiles
+🤖 Active agents: 25 patients, 4 caregivers
+⏰ Shift: day (7:00 - 15:00)
+
+📥 Ensuring patients exist in CareLoop (http://localhost:8000)...
+  ⏭️  Patient exists: Margaret Chen (id=31)
+  ⏭️  Patient exists: Robert Wilson (id=32)
+  ⏭️  Patient exists: Dorothy Liu (id=33)
+  ⏭️  Patient exists: Harold Park (id=34)
+  ⏭️  Patient exists: Eleanor Suzuki (id=35)
+  ⏭️  Patient exists: James O'Brien (id=36)
+  ⏭️  Patient exists: Betty Nakamura (id=37)
+  ⏭️  Patient exists: George Kim (id=38)
+  ⏭️  Patient exists: Florence Martinez (id=39)
+  ⏭️  Patient exists: Walter Brown (id=40)
+  ⏭️  Patient exists: Helen Patel (id=41)
+  ⏭️  Patient exists: Arthur Wong (id=42)
+  ⏭️  Patient exists: Iris Thompson (id=43)
+  ⏭️  Patient exists: Samuel Jackson (id=44)
+  ⏭️  Patient exists: Catherine Ross (id=45)
+  ⏭️  Patient exists: Frank Nguyen (id=46)
+  ⏭️  Patient exists: Ruth Anderson (id=47)
+  ⏭️  Patient exists: Edward Davis (id=48)
+  ⏭️  Patient exists: Gladys Cooper (id=49)
+  ⏭️  Patient exists: Oscar Petrov (id=50)
+  ⏭️  Patient exists: Mabel Zhang (id=51)
+  ⏭️  Patient exists: Thomas Lee (id=52)
+  ⏭️  Patient exists: Pearl Williams (id=53)
+  ⏭️  Patient exists: Victor Huang (id=54)
+  ⏭️  Patient exists: Lillian Foster (id=55)
+
+👥 Setting up staff mapping...
+  📋 Staff mapped: Lisa Chen → reporter_id=1 (shared)
+  📋 Staff mapped: Marcus Johnson → reporter_id=1 (shared)
+  📋 Staff mapped: Sarah Miller → reporter_id=1 (shared)
+  📋 Staff mapped: Amy Torres → reporter_id=1 (shared)
+  📋 Staff mapped: David Park → reporter_id=1 (shared)
+  📋 Staff mapped: Nina Williams → reporter_id=1 (shared)
+  📋 Staff mapped: Jennifer Liu → reporter_id=1 (shared)
+  📋 Staff mapped: Carlos Reyes → reporter_id=1 (shared)
+
+======================================================================
+▶️  SIMULATION START — 2026-03-03 07:00
+======================================================================
+
+
+--- ⏰ 07:30 (morning) ---
+
+  🔴 EVENT #1: Margaret Chen — sundowning
+     Margaret Chen is becoming increasingly agitated as the sun goes down. Pacing near the window, callin...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 1/3 in 3.0s...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 2/3 in 6.0s...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 3/3 in 12.0s...
+[Lisa Chen] ❌ All 3 retries exhausted for /api/events/report
+[Lisa Chen] Error reporting event: no response
+     📊 Score: 0/100 ❌
+
+  🔴 EVENT #2: Robert Wilson — exit seeking
+     Robert Wilson found near the main entrance, trying to open the door. Says 'I need to go home.'...
+[Marcus Johnson] ⚠️ ReadTimeout on /api/events/report, retry 1/3 in 3.0s...
+[Marcus Johnson] ⚠️ ReadTimeout on /api/events/report, retry 2/3 in 6.0s...
+[Marcus Johnson] ⚠️ ReadTimeout on /api/events/report, retry 3/3 in 12.0s...
+[Marcus Johnson] ❌ All 3 retries exhausted for /api/events/report
+[Marcus Johnson] Error reporting event: no response
+     📊 Score: 0/100 ❌
+
+  🔴 EVENT #3: James O'Brien — anxiety
+     James O'Brien is exhibiting anxiety. Staff attention needed....
+[Jennifer Liu] ⚠️ ReadTimeout on /api/events/report, retry 1/3 in 3.0s...
+[Jennifer Liu] ⚠️ ReadTimeout on /api/events/report, retry 2/3 in 6.0s...
+[Jennifer Liu] ⚠️ ReadTimeout on /api/events/report, retry 3/3 in 12.0s...
+[Jennifer Liu] ❌ All 3 retries exhausted for /api/events/report
+[Jennifer Liu] Error reporting event: no response
+     📊 Score: 0/100 ❌
+
+  🔴 EVENT #4: Betty Nakamura — minimal response
+     Betty Nakamura is exhibiting minimal_response. Staff attention needed....
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 1/3 in 3.0s...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 2/3 in 6.0s...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 3/3 in 12.0s...
+[Lisa Chen] ❌ All 3 retries exhausted for /api/events/report
+[Lisa Chen] Error reporting event: no response
+     📊 Score: 0/100 ❌
+
+  🔴 EVENT #5: Walter Brown — nighttime agitation
+     Walter Brown is awake and calling out loudly. Disturbing other residents. Appears disoriented....
+[Marcus Johnson] ⚠️ ReadTimeout on /api/events/report, retry 1/3 in 3.0s...
+[Marcus Johnson] ⚠️ ReadTimeout on /api/events/report, retry 2/3 in 6.0s...
+[Marcus Johnson] ⚠️ ReadTimeout on /api/events/report, retry 3/3 in 12.0s...
+[Marcus Johnson] ❌ All 3 retries exhausted for /api/events/report
+[Marcus Johnson] Error reporting event: no response
+     📊 Score: 0/100 ❌
+
+  🔴 EVENT #6: Samuel Jackson — fluctuating alertness
+     Samuel Jackson is exhibiting fluctuating_alertness. Staff attention needed....
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 1/3 in 3.0s...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 2/3 in 6.0s...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 3/3 in 12.0s...
+[Lisa Chen] ❌ All 3 retries exhausted for /api/events/report
+[Lisa Chen] Error reporting event: no response
+     📊 Score: 0/100 ❌
+
+  🔴 EVENT #7: Ruth Anderson — bathing refusal
+     Ruth Anderson is resisting bathing. Becomes agitated when approached about shower time....
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 1/3 in 3.0s...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 2/3 in 6.0s...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 3/3 in 12.0s...
+[Lisa Chen] ❌ All 3 retries exhausted for /api/events/report
+[Lisa Chen] Error reporting event: no response
+     📊 Score: 0/100 ❌
+
+  🔴 EVENT #8: Mabel Zhang — calling for mother
+     Mabel Zhang is exhibiting calling_for_mother. Staff attention needed....
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 1/3 in 3.0s...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 2/3 in 6.0s...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 3/3 in 12.0s...
+[Lisa Chen] ❌ All 3 retries exhausted for /api/events/report
+[Lisa Chen] Error reporting event: no response
+     📊 Score: 0/100 ❌
+
+  🔴 EVENT #9: Lillian Foster — excessive daytime sleepiness
+     Lillian Foster is exhibiting excessive_daytime_sleepiness. Staff attention needed....
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 1/3 in 3.0s...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 2/3 in 6.0s...
+[Lisa Chen] ⚠️ ReadTimeout on /api/events/report, retry 3/3 in 12.0s...
+[Lisa Chen] ❌ All 3 retries exhausted for /api/events/report
+[Lisa Chen] Error reporting event: no response
+     📊 Score: 0/100 ❌
+
+--- ⏰ 08:00 (morning) ---
+
+  🔴 EVENT #10: Robert Wilson — wandering
+     Robert Wilson found wandering in the hallway, appears confused about location. Tried to enter anothe...
+[Marcus Johnson] ⚠️ ReadTimeout on /api/events/report, retry 1/3 in 3.0s...

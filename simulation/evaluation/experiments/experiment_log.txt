@@ -12,3 +12,9 @@
 [2026-03-05 19:16:11] START: nemotron_evening (model=nemotron-3-nano:30b, shift=evening)
 [2026-03-05 20:02:20] DONE: nemotron_evening — 2769s (46m)
 [2026-03-05 20:02:25] START: nemotron_night (model=nemotron-3-nano:30b, shift=night)
+[2026-03-05 20:51:37] DONE: nemotron_night — 2952s (49m)
+[2026-03-05 20:51:42] --- Completed all shifts for nemotron-3-nano:30b ---
+[2026-03-05 20:51:42] --- Loading model: qwen3.5:27b ---
+[2026-03-05 20:51:46] API ready (PID=657592, model=qwen3.5:27b)
+[2026-03-05 20:51:46] Warming up qwen3.5:27b...
+[2026-03-05 20:52:15] START: qwen35_day (model=qwen3.5:27b, shift=day)

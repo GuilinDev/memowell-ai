@@ -12,9 +12,9 @@
 
 ## 🎬 Demo Video
 
-<video src="https://github.com/GuilinDev/memowell-ai/raw/main/docs/assets/careloop-demo.mp4" controls width="100%"></video>
+[![CareLoop AI Demo](docs/assets/careloop-thumbnail.jpg)](https://github.com/GuilinDev/memowell-ai/raw/main/docs/assets/careloop-demo.mp4)
 
-*50-second Remotion-rendered simulation showing real data from our ablation study: Act 1 (single critical event) → Act 2 (25 patients in parallel) → Act 3 (session metrics dashboard).*
+▶️ *Click thumbnail to download & play — 50-second simulation with real ablation data: Act 1 (critical event) → Act 2 (25 patients parallel) → Act 3 (metrics dashboard).*
 
 ---
 
@@ -50,28 +50,56 @@ We benchmark **4 open-source LLMs (27B–32B parameter range)** across **3 nursi
 
 ## 🏗️ Architecture
 
-```
-┌──────────────────────────────────────────────────────────┐
-│  Frontend (Next.js PWA)                                   │
-│  Patient timeline · Event feed · Shift handoff reports    │
-└───────────────────────┬──────────────────────────────────┘
-                        │ REST API
-┌───────────────────────▼──────────────────────────────────┐
-│  FastAPI Backend                                          │
-│  ├─ Event Router     (report → parse → intervene → outcome)
-│  ├─ Handoff Router   (generate → acknowledge)             │
-│  ├─ Patient Router   (CRUD)                               │
-│  ├─ RAG Pipeline     (ChromaDB → protocol match → cite)   │
-│  └─ LLM Service      (multi-provider: Groq / Ollama)     │
-├───────────────────────────────────────────────────────────┤
-│  SQLite (events, patients, handoffs, staff)                │
-│  ChromaDB (5,951 chunks from 8 guideline PDFs)            │
-├───────────────────────────────────────────────────────────┤
-│  Simulation Engine                                        │
-│  ├─ run_simulation.py    (single model + shift)           │
-│  ├─ run_experiments.sh   (full ablation: 4×3 matrix)      │
-│  └─ evaluator_agent.py   (automated scoring)              │
-└───────────────────────────────────────────────────────────┘
+```mermaid
+graph TB
+    subgraph Frontend["🖥️ Frontend — Next.js PWA"]
+        F1[Patient Timeline]
+        F2[Event Feed]
+        F3[Shift Handoff Reports]
+    end
+
+    Frontend -->|REST API| Backend
+
+    subgraph Backend["⚙️ FastAPI Backend"]
+        ER[Event Router<br/><i>report → parse → intervene → outcome</i>]
+        HR[Handoff Router<br/><i>generate → acknowledge</i>]
+        PR[Patient Router<br/><i>CRUD</i>]
+        RAG[RAG Pipeline<br/><i>ChromaDB → protocol match → cite</i>]
+        LLM[LLM Service<br/><i>multi-provider: Groq / Ollama</i>]
+    end
+
+    ER --> RAG
+    RAG --> LLM
+
+    subgraph Data["🗄️ Data Layer"]
+        SQL[(SQLite<br/>events · patients<br/>handoffs · staff)]
+        Chroma[(ChromaDB<br/>5,951 chunks<br/>8 guideline PDFs)]
+    end
+
+    Backend --> Data
+
+    subgraph Simulation["🔬 Simulation Engine"]
+        SIM[run_simulation.py<br/><i>single model + shift</i>]
+        EXP[run_experiments.sh<br/><i>full ablation: 4×3 matrix</i>]
+        EVAL[evaluator_agent.py<br/><i>automated scoring</i>]
+    end
+
+    Simulation --> Backend
+
+    subgraph Models["🤖 LLM Models (27B–32B)"]
+        M1[Nemotron 30B]
+        M2[Qwen 3.5 27B]
+        M3[DeepSeek-R1 32B]
+        M4[Mistral Small 24B]
+    end
+
+    LLM --> Models
+
+    style Frontend fill:#1a2332,stroke:#58a6ff,color:#c9d1d9
+    style Backend fill:#1a2332,stroke:#3fb950,color:#c9d1d9
+    style Data fill:#1a2332,stroke:#d29922,color:#c9d1d9
+    style Simulation fill:#1a2332,stroke:#a371f7,color:#c9d1d9
+    style Models fill:#1a2332,stroke:#56d4dd,color:#c9d1d9
 ```
 
 ### Multi-Provider LLM Service
