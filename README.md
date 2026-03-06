@@ -12,7 +12,7 @@
 
 ## 🎬 Demo Video
 
-https://github.com/GuilinDev/memowell-ai/raw/main/docs/assets/careloop-demo.mp4
+<video src="https://github.com/GuilinDev/memowell-ai/raw/main/docs/assets/careloop-demo.mp4" controls width="100%"></video>
 
 *50-second Remotion-rendered simulation showing real data from our ablation study: Act 1 (single critical event) → Act 2 (25 patients in parallel) → Act 3 (session metrics dashboard).*
 
