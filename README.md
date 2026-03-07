@@ -6,8 +6,6 @@
 [![Paper Target](https://img.shields.io/badge/Paper-NeurIPS%202026-purple?style=flat-square)]()
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
-[DreamerV3](https://github.com/nicklashansen/dreamer4)
-
 > **CareLoop** is a multi-agent AI system that parses clinical behavioral events, matches evidence-based protocols via RAG, and recommends interventions in real time — with zero hallucination by design.
 
 ---
@@ -19,6 +17,8 @@
 > 📺 *GIF preview auto-plays above — [click for full 50s video](https://github.com/GuilinDev/memowell-ai/raw/main/docs/assets/careloop-demo.mp4) with audio. Three acts: critical event → 25-patient parallel simulation → metrics dashboard.*
 
 ---
+## World Model
+[DreamerV3](https://github.com/nicklashansen/dreamer4)
 
 ## 🔬 Multi-Model Ablation Study
 
