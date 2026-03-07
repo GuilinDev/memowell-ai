@@ -22,7 +22,7 @@
 
 ## 🏥 Virtual Nursing Home — Agent Simulation
 
-![CareLoop Virtual Nursing Home](docs/assets/simulation_day_shift.gif)
+![CareLoop Virtual Nursing Home](docs/assets/simulation_day_shift_v2.gif)
 
 > *25 AI patients and 8 AI caregivers running a full Day Shift (07:00→15:00). Red dots = patients (⚠️ agitated / 😴 sleeping / 💊 receiving care). Blue dots = caregivers (🟡 responding to events). Star bursts = behavioral events triggered. 51 events across 16 time steps.*
 
