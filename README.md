@@ -6,6 +6,8 @@
 [![Paper Target](https://img.shields.io/badge/Paper-NeurIPS%202026-purple?style=flat-square)]()
 [![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
 
+[DreamerV3](https://github.com/nicklashansen/dreamer4)
+
 > **CareLoop** is a multi-agent AI system that parses clinical behavioral events, matches evidence-based protocols via RAG, and recommends interventions in real time — with zero hallucination by design.
 
 ---
